@@ -7,6 +7,6 @@ public class SetPositionCommand extends AbstractDriverCommand {
 
     @Override
     public void execute() {
-
+        driver.setPosition(x, y);
     }
 }
