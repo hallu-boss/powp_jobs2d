@@ -10,5 +10,6 @@ public class OperateToCommand extends AbstractDriverCommand {
     @Override
     public void execute(Job2dDriver driver) {
         driver.operateTo(x, y);
+        driver.setPosition(x, y);
     }
 }
