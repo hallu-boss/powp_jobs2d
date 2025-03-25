@@ -28,8 +28,16 @@ public class TestJobs2dPatterns {
 		SelectTestFigureOptionListener selectTestFigureOptionListener = new SelectTestFigureOptionListener(
 				DriverFeature.getDriverManager());
 
-		application.addTest("Figure Joe 1", selectTestFigureOptionListener);
-		application.addTest("Figure Joe 2", selectTestFigureOptionListener);
+		final String[] figuresListCmds = {
+				FigureCommand.FIGURE_JOE_1.getTitle(),
+				FigureCommand.FIGURE_JOE_2.getTitle(),
+				FigureCommand.FIGURE_COMMAND_SQ.getTitle(),
+				FigureCommand.FIGURE_COMMAND_X.getTitle()
+		};
+
+		for (String figureCmd : figuresListCmds) {
+			application.addTest(figureCmd, selectTestFigureOptionListener);
+		}
 	}
 
 	/**
